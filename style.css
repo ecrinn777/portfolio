@@ -1,0 +1,52 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f0ff; /* Açık lila */
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+    color: white;
+    background: #6b21a8; /* Mor ton */
+    background: linear-gradient(135deg, #6b21a8, #9333ea); /* gradient modern görünüm */
+}
+
+.profile {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid #ede9fe;
+}
+
+section {
+    background: #ede9fe; /* hafif mor ton */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+h2 {
+    color: #7c3aed; /* canlandırıcı mor */
+}
+/* Başlangıçta kartlar görünmez ve aşağıdan çıkıyor */
+.card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+/* Görünür olduğunda */
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
